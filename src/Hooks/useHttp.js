@@ -2,7 +2,7 @@
 
  import axios from "axios";
 import { useState, useEffect } from "react";
-axios.defaults.baseURL = "http://localhost:3030"
+axios.defaults.baseURL = process.env.PUBLIC_URL
 
 const useHttp = (request) => {
     const [httpResponse, sethttpResponse] = useState(null)

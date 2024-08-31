@@ -9,7 +9,7 @@ import {
 } from "./login.state";
 import Cookies from "universal-cookie";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3030";
+axios.defaults.baseURL = process.env.PUBLIC_URL;
 
 
 
@@ -17,7 +17,7 @@ axios.defaults.baseURL = "http://localhost:3030";
 const loginRequest = (user) => {
    return async (dispatch) => {
       try {
-
+console.log(process.env.PUBLIC_URL)
          dispatch({
             type: LOGIN_REQUEST,
             payload : []

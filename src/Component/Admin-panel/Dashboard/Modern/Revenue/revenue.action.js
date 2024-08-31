@@ -4,7 +4,7 @@ import {
     REVENUE_FAILED
 } from "./revenue.state";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3030"
+axios.defaults.baseURL = process.env.PUBLIC_URL
 
 const revenueRequest = () => {
     return async (dispatch) => {

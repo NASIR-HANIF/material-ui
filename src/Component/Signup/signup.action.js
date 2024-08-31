@@ -1,6 +1,6 @@
 import { SIGNUP_REQUEST,SIGNUP_SUCCESS,SIGNUP_ERROR } from "./signup.state";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3030";
+axios.defaults.baseURL = process.env.PUBLIC_URL;
 
 const signupRequest = (formData)=>{
     return async (dispatch)=>{

@@ -2,7 +2,7 @@ import { Outlet, Navigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { useAsync } from "react-async";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3030"
+axios.defaults.baseURL = process.env.PUBLIC_URL
 
 const verifyToken = async ({ token }) => {
 

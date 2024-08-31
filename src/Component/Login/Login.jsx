@@ -28,7 +28,7 @@ const Login = () => {
   const cookie = new Cookies()
   const dispatch = useDispatch();
   const [type, setType] = useState("password")
-  const  loginReducer  = useSelector(response => response.loginReducer);
+  const loginReducer = useSelector(response => response.loginReducer);
   const [remember, setRemember] = useState(false);
   const navegate = useNavigate();
   const [disabled, setDisabled] = useState(true);
@@ -193,13 +193,13 @@ const Login = () => {
                   type="email"
                 />
                 <FormControl>
-                   <InputLabel>Password</InputLabel>
+                  <InputLabel>Password</InputLabel>
                   <OutlinedInput
                     value={input.password}
                     onChange={handleInput}
                     onKeyDown={validateSubmit}
-                  error={error.password.state}
-                  helperText={error.password.message}
+                    error={error.password.state}
+                    helperText={error.password.message}
                     onInput={validateInput}
                     name="password"
                     label={"Password"}
